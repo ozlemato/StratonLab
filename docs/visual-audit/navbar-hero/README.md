@@ -1,0 +1,11 @@
+# Navbar, logos et apparition du hero — 14 octobre 2026
+
+Référence consultée en direct : https://www.gladia.io/. Styles publics observés : fond navbar rgba(0,0,0,.65), backdrop-filter blur40px ; liens éclaircis/décalés de3px en160ms ; panneau opacity260ms, translation-10px/scale.975 vers état normal en340ms, flou24px. Les styles calculés locaux confirment 40px et24px. Le verre de la barre est dans un pseudo-élément pour ne pas limiter le flou du panneau descendant.
+
+Logo fourni public/brand/Logo-StratonLab-white.png (1042×262) utilisé dans navbar et footer, sans cartouche clair. CTA de navigation sans flèche, y compris dans le menu mobile. Liens et contenu français conservés. Panneau fermé conservé dans le DOM mais inert et masqué, afin d’animer aussi sa fermeture ; Échap, clic extérieur, sortie du focus et liens le ferment. Accordéon mobile intégré immédiatement après Solutions, avec navigation défilable si nécessaire.
+
+Hero : lignes du titre et paragraphe en opacity0→1, blur36→0, y28→0, durée2,4s cubic-bezier(.16,1,.3,1), délais80/160/240ms. Boutons et cue : FadeInUp2,2s, délais320/440ms. Flou global12→0 sur2,4s ajouté à la demande utilisateur ; la référence observée applique explicitement le flou à ses lignes de texte. Ce flou global est une adaptation demandée, pas une mesure relevée sur le site. Reduced-motion désactive ces animations.
+
+Points : origine0° en haut, agent.active à−70° et task_001 à+45° dès1920px de largeur du canvas, interpolés vers les positions adaptées aux écrans plus étroits. Marge minimale48px aux bords ; aucun déplacement de ces points après le dessin. workflow_ready adopte #171717 pour le point et #444537 pour le texte comme les autres. Flèche Explorer : translateY(3px), translation horizontale nulle, au hover/focus.
+
+Validation : lint, TypeScript, builds production réussis ; neuf tests HTTP passés. Contrôles navigateur à1940×1100,1440×900 et390×844. Menu ouvert, fermeture Échap et restitution du focus à Solutions, Tab suivant vers Notre méthode (liens masqués exclus), accordéon mobile et fermeture testés. Footer blanc chargé sans fond. Aucune nouvelle mesure Lighthouse/axe ; reduced-motion contrôlé dans le code. Captures dans ce dossier. Aucun fichier demandé inaccessible.

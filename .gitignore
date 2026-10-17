@@ -1,0 +1,23 @@
+node_modules/
+.next/
+.env*
+!.env.example
+*.tsbuildinfo
+*.log
+.cache/
+
+# Matériel de référence local (captures tierces et export réseau).
+Référence/
+
+# Skills externes copiés localement pour la conception, non requis au site.
+skills/
+
+# Résultats générés lors des audits, dont les captures de la référence.
+docs/**/*.png
+docs/**/*.jpg
+docs/**/*.json
+docs/**/http-tests.txt
+
+# Fichiers propres aux postes de travail.
+.DS_Store
+Thumbs.db

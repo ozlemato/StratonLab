@@ -226,3 +226,9 @@ Police originale Manrope (référence Suisse Intl), timing reconstruit, animatio
 - Vérifications réellement exécutées : lint, typecheck, build et 9 tests réussis. Le dépôt distant était vide lors de la lecture. Le push a échoué avec HTTP 403 : GitHub indique que le compte utilisé par Git est `ozlemato` et qu’il n’a pas le droit d’écrire dans `fistekopt-cloud/StratonLab`.
 - Une tentative de lister les comptes du gestionnaire d’identifiants Git après ce refus a été rejetée par l’examen automatique comme recherche d’autres identifiants ; aucune autre tentative d’accès aux credentials n’a été faite.
 - Aucun fichier nécessaire à la préparation locale n’était inaccessible. Prochaine action exacte : faire authentifier Git avec un compte autorisé à écrire sur ce dépôt, ou accorder le droit d’écriture à `ozlemato`, puis exécuter `git push -u origin main` et vérifier la branche distante.
+
+### Publication GitHub — 17 octobre 2026, terminée sur le nouveau dépôt
+
+- L’utilisateur a remplacé la destination par `https://github.com/ozlemato/StratonLab`. Le dépôt cible a été vérifié vide ; `origin` pointe maintenant vers cette URL.
+- `git push -u origin main` a réussi : les commits préparés ont créé la branche distante `main`, suivie par la branche locale. Les vérifications du site précédant cet envoi restent : lint, typecheck, build et 9 tests réussis.
+- Prochaine action exacte : vérifier la présence de ce dernier compte rendu sur `origin/main` et conserver un état Git local propre ; ensuite reprendre les demandes de modification du site.

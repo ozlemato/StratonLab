@@ -231,4 +231,5 @@ Police originale Manrope (référence Suisse Intl), timing reconstruit, animatio
 
 - L’utilisateur a remplacé la destination par `https://github.com/ozlemato/StratonLab`. Le dépôt cible a été vérifié vide ; `origin` pointe maintenant vers cette URL.
 - `git push -u origin main` a réussi : les commits préparés ont créé la branche distante `main`, suivie par la branche locale. Les vérifications du site précédant cet envoi restent : lint, typecheck, build et 9 tests réussis.
-- Prochaine action exacte : vérifier la présence de ce dernier compte rendu sur `origin/main` et conserver un état Git local propre ; ensuite reprendre les demandes de modification du site.
+- Vérification distante effectuée après l’envoi du compte rendu : les empreintes de `main` et `origin/main` concordent, et `git status` indique un espace de travail propre. Aucun fichier nécessaire inaccessible.
+- Prochaine action exacte : reprendre les futures demandes de modification du site ; après chaque changement, consigner le jalon et synchroniser `main` si demandé.

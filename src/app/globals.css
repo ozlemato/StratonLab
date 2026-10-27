@@ -177,3 +177,38 @@ body:has(.solution-dialog[open]){overflow:hidden}
 .agency .section-heading h2,.solutions-section .section-heading h2{margin-top:0}
 .card-source{display:inline-block;margin-top:8px;color:var(--brand-accent);font-size:11px;line-height:1.4;text-decoration:underline;text-underline-offset:3px}
 .card-source:hover,.card-source:focus-visible{color:#fff}
+
+/* Ajustements de lisibilité demandés sur les sections éditoriales. */
+.eyebrow svg{width:14px;height:14px;flex:none;color:var(--brand-accent);stroke-width:1.8}
+.method-step>p,.method-step li{font-size:20px}
+.method-step li svg{width:20px;height:20px;flex:none}
+.step-label,.step-label>span{font-size:12px}
+.source-pills>span{font-size:13px}
+.flow-context{font-size:12px}
+.mini-fields>span{font-size:11px}
+.solution-card h3{margin-top:0}
+.case-demo .demo-caption,.case-demo .demo-input,.case-demo .demo-output,.case-demo .demo-process>span,.case-demo>small{font-size:12px}
+.text-link{font-size:13px}
+.commitments .eyebrow,.commitment-grid article>span{font-size:13px}
+.final-cta .eyebrow{font-size:14px}
+.final-cta p{font-size:16px}
+.footer-label,.footer-top>div:not(:first-child) a,.footer-bottom{font-size:14px}
+@media(min-width:600px){.before-after p{font-size:13px}}
+@media(max-width:599px){
+  .hero-bottom{position:relative;bottom:auto;left:auto;right:auto;margin-top:clamp(100px,17vh,170px);padding-bottom:32px}
+  .final-cta .eyebrow{letter-spacing:.04em;text-wrap:balance;max-width:100%}
+}
+
+/* Cue de défilement : entrée, léger balancement et pulsation du trait observés sur Gladia. */
+.explore-link{width:max-content;min-width:90px;min-height:68px;gap:12px;color:rgba(0,0,0,.5);transition:color .16s cubic-bezier(0,0,.2,1)}
+.explore-link:hover,.explore-link:focus-visible{color:rgba(0,0,0,.88)}
+.explore-link:focus-visible{outline:1px solid rgba(0,0,0,.35);outline-offset:8px;border-radius:3px}
+.explore-link .explore-label{display:block;width:auto;height:auto;background:none;font-size:10px;font-weight:500;letter-spacing:.22em;line-height:1.2}
+.explore-link .explore-line{display:block;width:1px;height:44px;border-radius:1px;background:linear-gradient(rgba(0,0,0,.55),transparent)}
+@keyframes explore-enter{0%{opacity:0;transform:translateY(22px) scale(.985);filter:blur(14px)}60%{filter:blur(2px)}100%{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}}
+@keyframes explore-nudge{0%,100%{transform:translateY(0)}42%{transform:translateY(5px)}}
+@keyframes explore-line-pulse{0%,100%{opacity:.55;transform:scaleY(1)}50%{opacity:1;transform:scaleY(1.04)}}
+@media(prefers-reduced-motion:no-preference){
+  .explore-link{animation:explore-enter 2.2s cubic-bezier(.16,1,.3,1) .44s both,explore-nudge 2.6s cubic-bezier(.45,.05,.2,1) 2.7s infinite}
+  .explore-link .explore-line{animation:explore-line-pulse 2.4s cubic-bezier(.4,0,.2,1) .6s infinite}
+}

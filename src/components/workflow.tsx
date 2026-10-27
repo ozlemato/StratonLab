@@ -4,7 +4,6 @@ import { Mail, FileText, Database, Check, ScanLine, Waypoints, UserCheck, ArrowD
 export function Workflow() {
   return <div className="workflow-visual" data-stage="0" aria-hidden="true">
     <div className="workflow-grid" />
-    <div className="workflow-caption"><span className="status-dot" /> DU BESOIN À L’USAGE <span>ILLUSTRATION</span></div>
     <div className="workflow-track">
       <svg className="workflow-wires" aria-hidden="true"/><svg className="workflow-line" aria-hidden="true"/>
       <div className="workflow-node" data-active="true">
